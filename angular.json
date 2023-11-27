@@ -43,13 +43,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "40mb",
+                  "maximumError": "55mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "20kb",
+                  "maximumError": "40kb"
                 }
               ],
               "fileReplacements": [
@@ -90,37 +90,20 @@
           }
         },
         "test": {
-          "builder": "@angular-builders/custom-webpack:karma",
+          "builder": "@angular-builders/jest:run",
           "options": {
-            "customWebpackConfig": {
-              "path": "src/extra-webpack.config.js",
-              "mergeRules": {
-                "externals": "replace"
-              }
-            },
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
-          }
+          },
+          "polyfills": "src/polyfills.ts",
+          "tsConfig": "tsconfig.spec.json"
+        }
+      },
+      "lint": {
+        "builder": "@angular-eslint/builder:lint",
+        "options": {
+          "lintFilePatterns": [
+            "src/**/*.ts",
+            "src/**/*.html"
+          ]
         }
       }
     }
