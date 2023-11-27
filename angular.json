@@ -91,25 +91,25 @@
         },
         "test": {
           "builder": "@angular-builders/jest:run",
-          "options": {
-          },
+          "options": {},
           "polyfills": "src/polyfills.ts",
           "tsConfig": "tsconfig.spec.json"
-        }
-      },
-      "lint": {
-        "builder": "@angular-eslint/builder:lint",
-        "options": {
-          "lintFilePatterns": [
-            "src/**/*.ts",
-            "src/**/*.html"
-          ]
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
     "schematicCollections": [
+      "@angular-eslint/schematics",
       "@angular-eslint/schematics"
     ]
   }
