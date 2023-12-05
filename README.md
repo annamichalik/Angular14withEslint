@@ -1,17 +1,22 @@
 # Angular14withEslint
+
 # AngularEslint
 
 Created based on https://www.freecodecamp.org/news/how-to-add-eslint-to-an-angular-application/
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
-Install laltest Node
+Install latest Node
+
 -> nvm install --lts
 -> nvm use 20.10.0
 -> npm i npm@10.2.3
+
+In order to test : https://valor-software.com/ng2-charts/#GeneralInfo
+
 ## Development server
 
 I had to install first : npm i @angular-eslint/schematics@14.3.0
-and then 
+and then
 -> ng add @angular-eslint/schematics
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
@@ -25,7 +30,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests via JEST
 
 ## Running end-to-end tests
 
