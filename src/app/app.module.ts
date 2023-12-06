@@ -10,8 +10,7 @@ import {AppComponent} from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgChartsModule
+    AppRoutingModule
   ],
   providers: [
 
