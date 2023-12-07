@@ -1,10 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {AngularDataComponent} from "./component/angular-data/angular-data.component";
 
 const routes: Routes = [
   {
     path: 'bar',
     loadChildren: () => import('./component/chart-examples/chart-examples.module').then(m => m.ChartExamplesModule)
+  },
+  {
+    path: '',
+    component: AngularDataComponent
   }
 
 ];
