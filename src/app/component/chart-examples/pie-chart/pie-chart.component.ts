@@ -21,9 +21,11 @@ export class PieChartComponent {
       },
       datalabels: {
         formatter: (value: any, ctx: any) => {
-          if (ctx.chart.data.labels) {
-            return ctx.chart.data.labels[ctx.dataIndex];
-          }
+          return '';
+          /*     if (ctx.chart.data.labels) {
+                 return ctx.chart.data.labels[ctx.dataIndex] + " added info";
+               }
+               return 'wee';*/
         },
       },
     },
@@ -33,6 +35,7 @@ export class PieChartComponent {
     datasets: [
       {
         data: [300, 500, 100],
+        backgroundColor: ['green', 'blue', 'orange']
       },
     ],
   };
@@ -127,7 +130,7 @@ export class PieChartComponent {
     if (this.pieChartData.labels) {
       this.pieChartData.labels.push(['Line 1', 'Line 2', 'Line 3']);
     }
-
+    this.pieChartData.datasets[0].backgroundColor = ['green', 'blue', 'orange', 'red']
     this.pieChartData.datasets[0].data.push(400);
 
     this.chart?.update();
