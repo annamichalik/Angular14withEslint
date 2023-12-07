@@ -4,7 +4,7 @@ import {AngularDataComponent} from "./component/angular-data/angular-data.compon
 
 const routes: Routes = [
   {
-    path: 'bar',
+    path: 'chart',
     loadChildren: () => import('./component/chart-examples/chart-examples.module').then(m => m.ChartExamplesModule)
   },
   {
