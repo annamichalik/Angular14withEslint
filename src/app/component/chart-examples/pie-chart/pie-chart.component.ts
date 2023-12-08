@@ -19,6 +19,17 @@ export class PieChartComponent {
         display: true,
         position: 'top',
       },
+      tooltip: {
+        enabled: true,
+        callbacks: {
+          label(tooltipItem): string | string[] | void {
+            const label = tooltipItem.label;
+            const timeValue = `parsed: ${tooltipItem.parsed} $`
+            return [timeValue, label];
+          }
+
+        }
+      },
       datalabels: {
         formatter: (value: any, ctx: any) => {
           return '';
