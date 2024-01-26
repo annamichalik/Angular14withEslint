@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnInit, TemplateRef, ViewChild, ViewEncapsulation} from '@angular/core'
+import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angular/core'
 import * as d3 from 'd3';
 
 @Component({
