@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {BarChartComponent} from "./bar-chart/bar-chart.component";
 import {PieChartComponent} from "./pie-chart/pie-chart.component";
 import {LineChartComponent} from "./line-chart/line-chart.component";
+import {GaugeComponent} from "./gauge/gauge.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'line',
     component: LineChartComponent
+  },
+  {
+    path: 'gauge',
+    component: GaugeComponent
   }
 
 ];

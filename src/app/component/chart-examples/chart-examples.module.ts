@@ -7,13 +7,15 @@ import {NgChartsModule} from "ng2-charts";
 import {PieChartComponent} from './pie-chart/pie-chart.component';
 import {MatDividerModule} from "@angular/material/divider";
 import { LineChartComponent } from './line-chart/line-chart.component';
+import { GaugeComponent } from './gauge/gauge.component';
 
 
 @NgModule({
   declarations: [
     BarChartComponent,
     PieChartComponent,
-    LineChartComponent
+    LineChartComponent,
+    GaugeComponent
   ],
   imports: [
     CommonModule,
