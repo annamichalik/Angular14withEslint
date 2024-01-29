@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 import {Arc, DefaultArcObject, ScaleLinear} from "d3";
-import {Component, OnInit, ViewEncapsulation} from '@angular/core'
+import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angular/core'
 
 @Component({
   selector: 'app-gauge',
@@ -9,13 +9,22 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core'
   encapsulation: ViewEncapsulation.None  //No view encapsulation for D3 components
 })
 export class GaugeComponent implements OnInit {
-
-  gaugemap: any;
+  @ViewChild('chartContainer', {static: true})
+  chartContainer!: ElementRef;
+  gaugemap: any = {};
 
   constructor() {
   }
 
   ngOnInit(): void {
+    const diameter = 860;
+    const radius = diameter / 2;
+    const svg = d3.select(this.chartContainer.nativeElement)
+      .append('svg')
+      .attr('width', diameter)
+      .attr('height', diameter)
+      .append('g')
+      .attr('transform', `translate(${radius}, ${radius})`);
     this.draw();
   }
 
@@ -60,7 +69,7 @@ export class GaugeComponent implements OnInit {
       let tickData: number[];
       let pointer: d3.Selection<SVGPathElement, number[][], null, undefined>;
 
-      var donut = d3.pie();
+      const donut = d3.pie();
 
       function deg2rad(deg: number) {
         return deg * Math.PI / 180;

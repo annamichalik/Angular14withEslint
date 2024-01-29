@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AngularDataComponent} from "./component/angular-data/angular-data.component";
 import {MyD3ComponentComponent} from "./my-d3-component/my-d3-component.component";
+import {GaugeXComponent} from "./component/gauge-x/gauge-x.component";
 
 const routes: Routes = [
   {
@@ -15,6 +16,9 @@ const routes: Routes = [
   {
     path: 'gauge',
     component: MyD3ComponentComponent
+  }, {
+    path: 'gauge-x',
+    component: GaugeXComponent
   }
 
 ];
